@@ -1,0 +1,88 @@
+{
+  "projectType": "saas",
+  "projectName": "Masca Dashboard",
+  "projectDescription": "A full-stack SaaS vendor management dashboard built with Vue 3 and Firebase, enabling vendors to manage products, track orders, and integrate with Bsale, Shopify, MercadoPago, and Uber Direct.",
+  "theme": "mint",
+  "primaryColor": "#43bb83",
+  "lightColor": "#3c8b74",
+  "darkColor": "#344d5c",
+  "navigation": {
+    "tabs": [
+      {
+        "tab": "Documentation",
+        "groups": [
+          {
+            "group": "Get Started",
+            "pages": ["introduction", "quickstart", "authentication"]
+          },
+          {
+            "group": "Core Features",
+            "pages": [
+              "features/dashboard",
+              "features/products",
+              "features/orders",
+              "features/sent-orders"
+            ]
+          },
+          {
+            "group": "Admin",
+            "pages": [
+              "admin/overview",
+              "admin/vendors",
+              "admin/products"
+            ]
+          },
+          {
+            "group": "Integrations",
+            "pages": [
+              "integrations/bsale",
+              "integrations/shopify",
+              "integrations/mercadopago",
+              "integrations/uber-direct"
+            ]
+          },
+          {
+            "group": "Configuration",
+            "pages": [
+              "configuration/environment-variables",
+              "configuration/firebase-setup",
+              "configuration/deployment"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "keyFeatures": [
+    "Role-based authentication (admin/vendor) via Firebase Auth",
+    "Vendor dashboard with daily orders and monthly sales metrics",
+    "Product management with Bsale sync and desync capabilities",
+    "Order management with status filtering and modal details",
+    "Sent orders tracking for fulfilled deliveries",
+    "Admin panel for managing vendors and platform-wide products",
+    "Bsale OAuth integration for Chilean billing platform",
+    "Shopify product and inventory synchronization",
+    "MercadoPago payment processing with webhook support",
+    "Uber Direct delivery quoting and tracking"
+  ],
+  "publicApiSurface": [
+    "GET /shopify/products",
+    "POST /shopify/inventory",
+    "GET /shopify/orders",
+    "GET /bsale/products",
+    "POST /bsale/oauth",
+    "GET /bsale/sucursales",
+    "POST /sync/products",
+    "POST /sync/desync",
+    "GET /sync/marketplace-products",
+    "POST /mp/create-pay",
+    "GET /mp/cart",
+    "POST /mp/pay-with-card",
+    "POST /mp/webhook",
+    "POST /mp/confirm-order",
+    "GET /uber/quote",
+    "POST /uber/tracking-webhook",
+    "POST /checkout/cart",
+    "GET /orders"
+  ]
+}
